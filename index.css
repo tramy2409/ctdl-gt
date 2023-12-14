@@ -1,0 +1,107 @@
+#bgvideo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: none;
+    z-index: -1;
+    filter: opacity(0.5);
+    mix-blend-mode: lighten;
+}
+
+#first_title {
+    position: absolute;
+    bottom: 10%;
+    left: 10%;
+}
+
+h3 {
+    width: 500px;
+    font-family: "Quicksand", sans-serif;
+    font-size: 14px;
+    font-weight: 200;
+    padding-left: 5px;
+    margin-top: 20px;
+    letter-spacing: 2px;
+}
+
+#first_title h2 {
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 16px;
+    letter-spacing: 0.2vw;
+}
+
+#first_title h1 {
+    text-transform: uppercase;
+    font-size: 6.5vmax;
+    text-align: center;
+    word-spacing: 3%;
+    line-height: 130%;
+    user-select: none;
+    color: white;
+    /* -webkit-text-stroke: 1px var(--text-color); */
+    /* color: transparent; */
+    /* background-image: url(/__ProjectWeb/image/back.png);
+    -webkit-background-clip: text; */
+    position: 0 0;
+    animation: back 25s linear infinite;
+}
+
+#logo {
+    position: fixed;
+    top: 40px; /* điều chỉnh khoảng cách từ trên xuống */
+    left: 50px; /* điều chỉnh khoảng cách từ trái sang phải */
+    width: 50px; /* điều chỉnh chiều rộng của logo */
+    height: 50px; /* điều chỉnh chiều cao của logo */
+    border-radius: 50%; /* làm cho hình ảnh trở thành hình tròn */
+    z-index: 3; /* để logo nổi lên trên video và nội dung khác */
+}
+
+#right-menu {
+    position: fixed;
+    top: 20px;
+    right: 80px;
+    z-index: 3;
+    letter-spacing: 2px;
+    /* margin-right: 20px; */
+}
+
+#right-menu ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+}
+
+#right-menu li {
+    margin-left: 20px;
+}
+
+#right-menu a {
+    text-decoration: none;
+    color: black;
+    font-size: 24px;
+    padding: 10px;
+    /* background-color: rgba(0, 0, 0, 0.7); */
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+#right-menu a:hover {
+    color: white;
+    background-color: #008B45;
+}
+    
+#myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    width: 100%; 
+    height: 100%;
+    object-fit: cover;
+}
+    
+    
+    

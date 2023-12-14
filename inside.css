@@ -1,0 +1,780 @@
+/* #header{
+    background-color: rgba(203, 167, 106, 0.9); 
+    color: white;
+    padding: 5px;
+    top: 0px;
+    bottom: 0px;
+    text-align: left;
+    border: none;
+    position: relative;
+    z-index: 1; 
+} */
+
+#header {
+    /* background-color: rgba(203, 167, 106, 0.9); */
+    background-color: rgba(46, 139, 87, 0.9);
+    color: white;
+    padding: 5px;
+    text-align: left;
+    position: fixed;  
+    width: 100%; 
+    z-index: 1000;
+    top: 0;
+    transition: top 0.3s;
+    display: block;
+}
+
+
+
+body {
+    font-family: 'Open Sans';
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    margin: 0;
+    padding: 0;
+}
+
+.background {
+    filter: blur(4px); 
+    background-size: cover;
+    background-attachment: fixed;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+#menu {
+    display: flex;
+    background-color: lightblue;
+    justify-content: flex-end;
+
+}
+
+.menu-left {
+    flex: 1;
+    padding: 0px;
+}
+
+.menu-right {
+    display: flex;
+    flex: 4;
+    justify-content: left;
+}
+
+
+.menu-item {
+    padding: 12px;
+    cursor: pointer;
+    flex: 1;
+    text-align: left;
+    margin-left: 10px;
+    font-size: 20px;
+    position: relative;
+    display: flex; /* Thêm dòng này */
+    flex-direction: column;
+    border: 2px solid #ccc;
+    border-color: rgba(238, 238, 238, 0.5);
+    box-sizing: 5 5px;
+    border-radius: 8px;
+}
+
+.menu-item a {
+    text-decoration: none;
+    color: white; 
+}
+
+.menu-item:hover {
+    
+    background-color: rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+    color: black; 
+    /* box-shadow: 0 3px orange; */
+}
+
+/* .menu-item.selected {
+    /* Hiển thị dấu gạch chân khi mục được chọn 
+    border-bottom: 2px solid orangered;
+} */
+
+
+.home-item {
+    padding: 15px;
+    cursor: pointer;
+    flex: 1;
+    text-align: left; 
+    margin-right: 10px;
+    font-size: 20px;
+    justify-content: flex-start;
+    color: black;
+    box-shadow: 0 3px transparent;
+}
+
+.home-item a {
+    text-decoration: none;
+    color: black; 
+    
+}
+
+.home-item:hover {
+    /* background-color: rgba(238, 238, 238, 0.5); */
+    color: white; 
+    text-decoration: none;
+    /* box-shadow: 0 3px yellow; */
+    /* box-shadow: 0 3px orange; */
+    width: 118px;
+}
+
+/* .home-item.selected {
+    /* Hiển thị dấu gạch chân khi mục được chọn 
+    border-bottom: 2px solid orangered;
+} */
+
+.content-item {
+    display: none;
+    padding: 20px;
+    margin-top: 40px;
+    top: 100px;
+    /* border: 1px solid #ae8a43; */
+    border: none;
+    position: relative;
+    z-index: 2; 
+    color: white; 
+}
+
+.content-item.active {
+    display: block;
+}
+
+#baihoc-content {
+    display: flex;
+    /* display: flex; */
+    /* justify-content: space-between;  */
+    margin-top: 20px;
+    justify-content: left;
+}
+
+#danh-sach-baihoc {
+    width: 20%;
+    padding: 15px;
+    border: 1px solid #ccc;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.baihoc-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    cursor: pointer;
+    color: black;
+    border: 1px solid #ccc;
+    text-align: center;
+    margin: 5px 0;
+    background-color: white;
+    font-weight: bold;
+}
+
+.baihoc-item:hover {
+    background-color: #FF8C00;
+}
+
+.baihoc-item.selected {
+    background-color: #FF8C00;
+    color: white;
+}
+
+
+.baihoc2-item {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    cursor: pointer;
+    color: black;
+    border: 1px solid #ccc;
+    text-align: left;
+    margin: 5px 0;
+    background-color: silver;
+    /* display: none; */
+}
+
+.baihoc2-item:hover {
+    background-color: 	#FFA500;
+    font-weight: bold;
+}
+
+.baihoc2-item.selected {
+    background-color: #FFA500;
+    color: white;
+}
+
+.baihoc3-item {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    cursor: pointer;
+    color: black;
+    border: 1px solid #ccc;
+    text-align: left;
+    margin: 5px 0;
+    background-color: silver;
+    /* display: none;  */
+}
+
+.baihoc3-item:hover {
+    background-color: 	#FFA500;
+    font-weight: bold;
+}
+
+.baihoc3-item.selected {
+    background-color: #FFA500;
+    color: white;
+}
+
+.baihoc4-item {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    cursor: pointer;
+    color: black;
+    border: 1px solid #ccc;
+    text-align: left;
+    margin: 5px 0;
+    background-color: silver;
+    /* display: none;  */
+}
+
+.baihoc4-item:hover {
+    background-color: 	#FFA500;
+    font-weight: bold;
+}
+
+.baihoc4-item.selected {
+    background-color: #FFA500;
+    color: white;
+}
+
+.baihoc5-item {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    cursor: pointer;
+    color: black;
+    border: 1px solid #ccc;
+    text-align: left;
+    margin: 5px 0;
+    background-color: silver;
+    /* display: none;  */
+    display: none;
+}
+
+.baihoc5-item:hover {
+    background-color: 	#FFA500;
+    font-weight: bold;
+}
+
+.baihoc5-item.selected {
+    background-color: #FFA500;
+    color: white;
+}
+
+#noidung-lienquan {
+    width: 20%;
+    padding: 8px;
+    color: black;
+    font-family: 'Open Sans';
+    border: 1px solid #ccc;
+    font-size: 13px;
+}
+
+.ndlq-item {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    cursor: pointer;
+    color: black;
+    border: 1px solid transparent;
+    text-align: left;
+    margin: 5px 0;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.ndlq-item:hover {
+    background-color: white;
+    font-weight: bold;
+}
+
+#nd {
+    width: 60%;
+    height: 100%;
+    /* padding: 40px; */
+    /* background-color: white; */
+    color: black;
+    /* border: 1px solid #ccc; */
+    border: none;
+    padding-top: 0px;
+    text-align: left;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: rgba(255, 255, 255, 1);
+    margin-bottom: 0px;
+}
+
+
+.logo {
+    font-size: 40px;
+    font-weight: bold;
+    flex: 1; 
+    text-align: left; 
+    margin: 0;
+}
+
+#myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    width: 100%; 
+    height: 100%;
+    object-fit: cover;
+}
+
+.dark {
+    background-color: #333;
+    color: white;
+}
+
+.lesson-content {
+    text-align: left;
+    font-size: 18px; 
+    line-height: 1.8;
+    max-width: 800px;
+    /* padding-left: 20px; */
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.lesson-content-I {
+    text-align: left;
+    font-size: 18px; 
+    line-height: 1.8;
+    max-width: 800px;
+    /* padding-left: 20px; */
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.lesson-content-II {
+    text-align: left;
+    font-size: 18px; 
+    line-height: 1.8;
+    max-width: 800px;
+    /* padding-left: 20px; */
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.lesson {
+    text-align: left;
+    font-size: 16px; 
+    line-height: 1.8;
+    /* max-width: 800px; */
+    padding-left: 10px; 
+    /* margin-top: 20px; */
+    margin-left: 10px;
+}
+
+.bt-content {
+    text-align: center;
+    font-size: 20px; 
+    line-height: 1.8;
+}
+
+.bt {
+    text-align: left;
+    font-size: 16px; 
+    line-height: 1.8;
+}
+
+.lesson2-content {
+    text-align: left;
+    font-size: 18px; 
+    line-height: 1.8;
+    max-width: 800px;
+    /* padding-left: 20px; */
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.lesson2 {
+    text-align: left;
+    font-size: 16px; 
+    line-height: 1.8;
+    /* max-width: 800px; */
+    padding-left: 10px; 
+    /* margin-top: 20px; */
+    margin-left: 10px;
+}
+
+.lesson3 {
+    text-align: left;
+    font-size: 16px; 
+    line-height: 1.8;
+    /* max-width: 800px; */
+    padding-left: 10px; 
+    /* margin-top: 20px; */
+    margin-left: 10px;
+}
+
+/* ------EX---------- */
+
+.content2-item {
+    display: none;
+    padding: 20px;
+    margin-top: 150px;
+    /* border: 1px solid #ae8a43; */
+    border: none;
+    position: relative;
+    z-index: 2; 
+    color: white; 
+}
+
+.content3-item {
+    display: none;
+    padding: 20px;
+    margin-top: 20px;
+    /* border: 1px solid #ae8a43; */
+    border: none;
+    position: relative;
+    z-index: 2; 
+    color: white; 
+}
+
+#baitap-content {
+    display: flex;
+    display: flex;
+    /* justify-content: space-between; */
+    margin-top: 20px;
+    justify-content: left;
+}
+
+#danh-sach-baitap {
+    width: 20%;
+    padding: 20px;
+    /* border: 1px solid #ccc; */
+    background-color: rgba(255, 255, 255, 0.2);
+    border: none;
+}
+
+.baitap-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    cursor: pointer;
+    color: black;
+    border: 1px solid #ccc;
+    text-align: center;
+    margin: 5px 0;
+    background-color: #f0f0f0;
+    font-weight: bold;
+}
+
+.baitap-item:hover {
+    background-color: 	#FFA500;
+    font-weight: bold;
+}
+
+.baitap-item.selected {
+    background-color: #FFA500;
+    color: white;
+}
+
+.baitap2-item {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    cursor: pointer;
+    color: black;
+    border: 1px solid #ccc;
+    text-align: left;
+    margin: 5px 0;
+    background-color: silver;
+    /* display: none; */
+}
+
+.baitap2-item:hover {
+    background-color: #7f9b30;
+}
+
+.baitap2-item.selected {
+    background-color: #FFA500;
+    color: white;
+}
+
+.baitap3-item {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    cursor: pointer;
+    color: black;
+    border: 1px solid #ccc;
+    text-align: left;
+    margin: 5px 0;
+    background-color: silver;
+    display: none;
+}
+
+.baitap3-item:hover {
+    background-color: 	#FFA500;
+    font-weight: bold;
+}
+
+.baitap3-item.selected {
+    background-color: #FFA500;
+    color: white;
+}
+
+.baitap4-item {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    cursor: pointer;
+    color: black;
+    border: 1px solid #ccc;
+    text-align: center;
+    margin: 5px 0;
+    background-color: silver;
+    /* display: none; */
+}
+
+.baitap4-item:hover {
+    background-color: 	#FFA500;
+    font-weight: bold;
+}
+
+.baitap4-item.selected {
+    background-color: #FFA500;
+    color: white;
+}
+
+#ndbaitap {
+    width: 80%;
+    height: 100%;
+    /* padding: 80px; */
+    /* background-color: white; */
+    color: black;
+    /* border: 1px solid #ccc; */
+    border: none;
+    padding-top: 0px;
+    /* padding-bottom: -5px; */
+    text-align: left;
+    padding-left: 50px;
+    padding-right: 10px;
+    background-color: rgba(255, 255, 255, 1);
+    margin-left: 0px;
+    margin-bottom: 0px;
+}
+
+#ndpp {
+    width: 60%;
+    height: 100%;
+    /* padding: 80px; */
+    /* background-color: white; */
+    color: black;
+    /* border: 1px solid #ccc; */
+    border: none;
+    /* padding-top: 10px; */
+    text-align: left;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.hidden {
+            display: none;
+        }
+
+.row a {
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    font-size: 18px;
+}
+
+.row a:hover {
+    color: black;
+}
+
+.row .col-3:hover {
+    border: 5px solid black;
+    color: black;
+}
+
+#lesson-content-container {
+    height: 600px; /* Bạn có thể điều chỉnh chiều cao theo nhu cầu */
+    overflow-y: auto; /* Kích hoạt cuộn dọc khi nội dung vượt quá */
+    border: 1px solid #ccc; /* Thêm viền để trực quan tốt hơn */
+}
+
+#nd-content-container {
+    height: 700px;
+    overflow-y: auto;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    /* scrollbar-width: thin; */
+     /* overflow: hidden;  */
+}
+
+/* ------------------ */
+#container {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+}
+
+#menucode {
+    display: flex;
+    gap: 10px;
+}
+
+    /* Thêm kiểu cho menu */
+.menucode-item {
+    cursor: pointer;
+    padding: 3px;
+    border-radius: 2px;
+    background-color: #ddd;
+}
+
+.menucode-item:hover {
+    background-color: #ccc;
+}
+
+#codeContainer {
+    position: relative;
+    border: 2px solid #555;
+    padding: 10px; /* giảm padding để làm cho khung nhỏ lại */
+    margin: 0 0 10px;
+    font-size: 13px;
+    overflow: auto;
+    line-height: 18px;
+    text-align: start;
+    width: 70%; /* thay đổi chiều rộng của khung code */
+    background-color: #E8E8E8;
+}
+
+
+.codeWrapper {
+    text-align: left;
+}
+
+.codeWrapper code {
+    display: block;
+    text-align: left;
+    margin-left: 20px;
+}
+
+
+    /* Thêm kiểu cho biểu tượng copy */
+#copyIcon {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    cursor: pointer;
+}
+
+.selected {
+    background-color: #CC9933; /* Change this line */
+    color: black; /* Add this line to ensure text visibility on the background */
+}
+
+    /* ----------------------- */
+#home-search {
+    text-align: right;
+    margin-top: 20px; /* Add margin to separate from the menu */
+    margin-right: 10px;
+}
+
+#search-input {
+    width: 300px;
+    padding: 5px;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+#search-button, #refresh-button {
+    padding: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #FFCC00;
+    border: none;
+    border-radius: 5px;
+    margin-left: 5px;
+    /* color: white; */
+}
+
+#search-button:hover, #refresh-button:hover {
+    background-color: #FFCC33;
+}
+
+    /* ----------- */
+#noidung-lienquan {
+    color: black;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.2);
+    font-family: 'Open Sans';
+    font-size: 18px;
+}
+
+.lesson-part {
+    display: block; /* Hiển thị tất cả các phần */
+}
+
+.lesson-part:not(.lesson-content) {
+    display: none; /* Ẩn tất cả các phần ngoại trừ phần I */
+}
+
+.exer-item {
+    font-size: 14pt;
+}
+
+.exer2-item {
+    font-size: 14pt;
+}
+
+.mean-content {
+    display: none;
+}
+
+/* ------------------------- */
+input[type="checkbox"] {
+    display: none; /* Hide default checkbox */
+}
+
+input[type="checkbox"] + label {
+    position: relative;
+    padding-left: 30px; /* Space for custom checkbox */
+    cursor: pointer;
+    font-size: 16px;
+    margin-right: 10px; /* Adjust the margin to move the checkbox to the left */
+    margin-left: 5px;
+}
+
+input[type="checkbox"] + label:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 2px;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #FFCC00; /* Border color */
+    border-radius: 5px;
+    background-color: #fff; /* Background color */
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+input[type="checkbox"]:checked + label:before {
+    content: '\2714'; /* Unicode checkmark character */
+    font-size: 16px;
+    line-height: 20px;
+    color: #FFCC00; /* Checkmark color */
+}

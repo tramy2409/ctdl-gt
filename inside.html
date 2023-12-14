@@ -1,0 +1,963 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    <title>Cấu trúc dữ liệu</title>
+    <link rel = "icon" href = "img/logo_codde.jpg" type = "image/x-icon">
+    <link rel="stylesheet" type="text/css" href="inside.css">
+<body>
+    <!-- <video autoplay muted loop id="myVideo">
+        <source src="video/bg_dashboard.mp4" type="video/mp4">
+    </video> -->
+
+    <!-- <div class="background"></div> -->
+
+    <img src="img/bg2.png" alt="Background image" id="myVideo">
+
+    <div id="header">
+        <br>
+        <ul type="none">
+                
+                <div class="home-item"><a href = "index.html">&#8689; HOME</a></div>
+                
+                <div class="menu-right">
+                    <li><div class="menu-item" onclick="selectMenuItem(this); showContent('baihoc')">BÀI HỌC</div></li>
+                    <li><div class="menu-item" onclick="selectMenuItem(this); showContent('baitap')">PHƯƠNG PHÁP & BÀI TẬP</div></li>
+                    <li><div class="menu-item" onclick="selectMenuItem(this); showContent('illustration')">MINH HỌA</div></li>
+                </div>
+            </ul>
+    </div>
+
+<!-- --------------------------------------------------------------------------------------------------------- -->
+
+    <div id="content">
+        <div class="content-item" id="baihoc">
+            <div id="home-search">
+                <div>
+                    <input type="text" id="search-input" placeholder="Tìm kiếm">
+                    <button id="search-button" onclick="searchContent()">Tìm</button>
+                    <button id="refresh-button" onclick="fresheshContent()">Làm mới</button>
+                    <input type="checkbox" id="khai-niem-checkbox">
+                    <label for="khai-niem-checkbox">Khái niệm</label>
+                    <input type="checkbox" id="tinh-chat-checkbox">
+                    <label for="tinh-chat-checkbox">Tính chất</label>
+                </div>
+            </div>
+
+        
+            <div id="baihoc-content">
+                <div id="danh-sach-baihoc">
+                    <div id="nd-content-container">
+                    <div id = "ndcontent">
+                    <div class="baihoc-item" onclick="toggleSelected(this)">
+                        <div id = "ctdl">Cấu trúc dữ liệu</div>
+                    </div>
+                    <div class="sub-items-container hidden">
+                        <div class="baihoc2-item" data-default-visibility="true">
+                            <div id = "tq">Tổng quan về cấu trúc dữ liệu</div>
+                        </div>
+                        <div class="baihoc3-item" id = "tq1" data-default-visibility="true" onclick="toggleSelected3(this)">
+                            <div id = "tq1">Tổng quan</div>
+                        </div>
+                    </div>
+                    <!-- <div class="baihoc2-item">
+                        <div>Tổng quan</div>
+                    </div> -->
+
+                    <div class="baihoc-item" onclick="toggleSelected(this)">
+                        <div id = "sorting">Sorting</div>
+                    </div>
+
+                    <div class="sub-items-container hidden">
+                        <div class="baihoc2-item" id = "bubble" data-default-visibility="true" onclick="toggleSelected2(this)">
+                            <div id = "bb">Bubble Sort</div>
+                        </div>
+                        <div class="baihoc2-item" id = "insert" data-default-visibility="true" onclick="toggleSelected2(this)">
+                            <div id = "inse">Insertion Sort</div>
+                        </div>
+                        <div class="baihoc2-item" id = "select" data-default-visibility="true" onclick="toggleSelected2(this)">
+                            <div id = "se">Selection Sort</div>
+                        </div>
+                        <div class="baihoc2-item" id = "merge" data-default-visibility="true" onclick="toggleSelected2(this)">
+                            <div id = "me">Merge Sort</div>
+                        </div>
+                        <div class="baihoc2-item" id = "quick" data-default-visibility="true" onclick="toggleSelected2(this)">
+                            <div id = "qu">Quick Sort</div>
+                        </div>
+                        <div class="baihoc2-item" id = "shell" data-default-visibility="true" onclick="toggleSelected2(this)">
+                            <div id = "sh">Shell Sort</div>
+                        </div>
+                        <div class="baihoc3-item" id = "kn" data-default-visibility="true" onclick="toggleSelected3(this)">
+                            <div id = "kn">Bubble Sort</div>
+                        </div>
+                        <div class="baihoc3-item" id = "kn1" data-default-visibility="true" onclick="toggleSelected3(this)">
+                            <div id = "kn1">Insertion Sort</div>
+                        </div>
+                        <div class="baihoc3-item" id = "kn2" data-default-visibility="true" onclick="toggleSelected3(this)">
+                            <div id = "kn2">Selection Sort</div>
+                        </div>
+                        <div class="baihoc3-item" id = "kn3" data-default-visibility="true" onclick="toggleSelected3(this)">
+                            <div id = "kn3">Merge Sort</div>
+                        </div>
+                        <div class="baihoc3-item" id = "kn4" data-default-visibility="true" onclick="toggleSelected3(this)">
+                            <div id = "kn4">Quick Sort</div>
+                        </div>
+                        <div class="baihoc3-item" id = "kn5" data-default-visibility="true" onclick="toggleSelected3(this)">
+                            <div id = "kn5">Shell Sort</div>
+                        </div>
+
+                        <div class="baihoc4-item" id = "tc" data-default-visibility="true" onclick="toggleSelected5(this)">
+                            <div id = "tc">Bubble Sort</div>
+                        </div>
+                        <div class="baihoc4-item" id = "tc1" data-default-visibility="true" onclick="toggleSelected5(this)">
+                            <div id = "tc1">Insertion Sort</div>
+                        </div>
+                        <div class="baihoc4-item" id = "tc2" data-default-visibility="true" onclick="toggleSelected5(this)">
+                            <div id = "tc2">Selection Sort</div>
+                        </div>
+                        <div class="baihoc4-item" id = "tc3" data-default-visibility="true" onclick="toggleSelected5(this)">
+                            <div id = "tc3">Merge Sort</div>
+                        </div>
+                        <div class="baihoc4-item" id = "tc4" data-default-visibility="true" onclick="toggleSelected5(this)">
+                            <div id = "tc4">Quick Sort</div>
+                        </div>
+                        <div class="baihoc4-item" id = "tc5" data-default-visibility="true" onclick="toggleSelected5(this)">
+                            <div id = "tc5">Shell Sort</div>
+                        </div>
+
+                        <div class="baihoc5-item" id = "baihoc5-item-1" data-default-visibility="true" onclick="toggleSelected7(this)">
+                            <div id = "baihoc5-item-1">Bubble Sort</div>
+                        </div>
+                        <div class="baihoc5-item" id = "baihoc5-item-2" data-default-visibility="true" onclick="toggleSelected7(this)">
+                            <div id = "baihoc5-item-2">Insertion Sort</div>
+                        </div>
+                        <div class="baihoc5-item" id = "baihoc5-item-3" data-default-visibility="true" onclick="toggleSelected7(this)">
+                            <div id = "baihoc5-item-3">Selection Sort</div>
+                        </div>
+                        <div class="baihoc5-item" id = "baihoc5-item-4" data-default-visibility="true" onclick="toggleSelected7(this)">
+                            <div id = "baihoc5-item-4">Merge Sort</div>
+                        </div>
+                        <div class="baihoc5-item" id = "baihoc5-item-5" data-default-visibility="true" onclick="toggleSelected7(this)">
+                            <div id = "baihoc5-item-5">Quick Sort</div>
+                        </div>
+                        <div class="baihoc5-item" id = "baihoc5-item-6" data-default-visibility="true" onclick="toggleSelected7(this)">
+                            <div id = "baihoc5-item-6">Shell Sort</div>
+                        </div>
+                
+                    </div>
+
+                    <div class="baihoc-item" onclick="toggleSelected(this)">
+                        <div id = "bits">Ngăn xếp và hàng đợi</div>
+                    </div>
+                    <div class="sub-items-container hidden">
+                        <div class="baihoc2-item" data-default-visibility="true" onclick="toggleSelected2(this)">
+                            <div id = "sta">Stack</div>
+                        </div>
+                        <div class="baihoc2-item" data-default-visibility="true" onclick="toggleSelected2(this)">
+                            <div id = "que">Queue</div>
+                        </div>
+                        <div class="baihoc3-item" id = "kn6" data-default-visibility="true" onclick="toggleSelected3(this)">
+                            <div id = "kn6">Stack</div>
+                        </div>
+                        <div class="baihoc3-item" id = "kn7" data-default-visibility="true" onclick="toggleSelected3(this)">
+                            <div id = "kn7">Queue</div>
+                        </div>
+
+                        <div class="baihoc4-item" id = "tc6" data-default-visibility="true" onclick="toggleSelected5(this)">
+                            <div id = "tc6">Stack</div>
+                        </div>
+                        <div class="baihoc4-item" id = "tc7" data-default-visibility="true" onclick="toggleSelected5(this)">
+                            <div id = "tc7">Queue</div>
+                        </div>
+
+                        <div class="baihoc5-item" id = "baihoc5-item-7" data-default-visibility="true" onclick="toggleSelected7(this)">
+                            <div id = "baihoc5-item-7">Stack</div>
+                        </div>
+                        <div class="baihoc5-item" id = "baihoc5-item-8" data-default-visibility="true" onclick="toggleSelected7(this)">
+                            <div id = "baihoc5-item-8">Queue</div>
+                        </div>
+                    </div>
+
+                    <div class="baihoc-item" onclick="toggleSelected(this)">
+                        <div id = "linked">Danh sách liên kết - Linked List</div>
+                    </div>
+                    <div class="sub-items-container hidden">
+                        <div class="baihoc2-item" data-default-visibility="true" onclick="toggleSelected2(this)">
+                            <div id = "link">Single Linked Lists</div>
+                        </div>
+                        <div class="baihoc2-item" data-default-visibility="true" onclick="toggleSelected2(this)">
+                            <div id = "link2">Doubly Linked List</div>
+                        </div>
+                        <div class="baihoc2-item" data-default-visibility="true" onclick="toggleSelected2(this)">
+                            <div id = "link3">Circular Linked List</div>
+                        </div>
+                        <div class="baihoc3-item" id = "kn8" data-default-visibility="true" onclick="toggleSelected3(this)">
+                            <div id = "kn8">Single Linked Lists</div>
+                        </div>
+                        <div class="baihoc3-item" id = "kn9" data-default-visibility="true" onclick="toggleSelected3(this)">
+                            <div id = "kn9">Doubly Linked List</div>
+                        </div>
+                        <div class="baihoc3-item" id = "kn10" data-default-visibility="true" onclick="toggleSelected3(this)">
+                            <div id = "kn10">Circular Linked List</div>
+                        </div>
+
+                        <div class="baihoc4-item" id = "tc8" data-default-visibility="true" onclick="toggleSelected5(this)">
+                            <div id = "tc8">Single Linked Lists</div>
+                        </div>
+                        <div class="baihoc4-item" id = "tc9" data-default-visibility="true" onclick="toggleSelected5(this)">
+                            <div id = "tc9">Doubly Linked List</div>
+                        </div>
+                        <div class="baihoc4-item" id = "tc10" data-default-visibility="true" onclick="toggleSelected5(this)">
+                            <div id = "tc10">Circular Linked List</div>
+                        </div>
+
+                        <div class="baihoc5-item" id = "baihoc5-item-9" data-default-visibility="true" onclick="toggleSelected7(this)">
+                            <div id = "baihoc5-item-9">Single Linked Lists</div>
+                        </div>
+                        <div class="baihoc5-item" id = "baihoc5-item-10" data-default-visibility="true" onclick="toggleSelected7(this)">
+                            <div id = "baihoc5-item-10">Doubly Linked List</div>
+                        </div>
+                        <div class="baihoc5-item" id = "baihoc5-item-11" data-default-visibility="true" onclick="toggleSelected7(this)">
+                            <div id = "baihoc5-item-11">Circular Linked List</div>
+                        </div>
+                    </div>
+
+                    <div class="baihoc-item" onclick="toggleSelected(this)">
+                        <div id = "array">Cấu trúc dữ liệu mảng (Array)</div>
+                    </div>
+                    <div class="sub-items-container hidden">
+                        <div class="baihoc2-item" data-default-visibility="true" onclick="toggleSelected2(this)">
+                            <div id = "arr1">Cấu trúc dữ liệu mảng (Array)</div>
+                        </div>
+
+                        <div class="baihoc3-item" id = "kn11" data-default-visibility="true" onclick="toggleSelected3(this)">
+                            <div id = "kn11">Cấu trúc dữ liệu mảng (Array)</div>
+                        </div>
+
+                        <div class="baihoc4-item" id = "tc11" data-default-visibility="true" onclick="toggleSelected5(this)">
+                            <div id = "tc11">Cấu trúc dữ liệu mảng (Array)</div>
+                        </div>
+
+                        <div class="baihoc5-item" id = "baihoc5-item-12" data-default-visibility="true" onclick="toggleSelected7(this)">
+                            <div id = "baihoc5-item-12">Cấu trúc dữ liệu mảng (Array)</div>
+                        </div>
+                    </div>
+
+                    <div class="baihoc-item" onclick="toggleSelected(this)">
+                        <div id = "search">Tìm kiếm</div>
+                    </div>
+                    <div class="sub-items-container hidden">
+                        <div class="baihoc2-item" data-default-visibility="true" onclick="toggleSelected2(this)">
+                            <div id = "tk1">Linear Search</div>
+                        </div>
+                        <div class="baihoc2-item" data-default-visibility="true" onclick="toggleSelected2(this)">
+                            <div id = "tk2">Binary Search</div>
+                        </div>
+                        <div class="baihoc2-item" data-default-visibility="true" onclick="toggleSelected2(this)">
+                            <div id = "tk3">Interpolation Search</div>
+                        </div>
+                        <div class="baihoc3-item" id = "kn12" data-default-visibility="true" onclick="toggleSelected3(this)">
+                            <div id = "kn12">Linear Search</div>
+                        </div>
+                        <div class="baihoc3-item" id = "kn13" data-default-visibility="true" onclick="toggleSelected3(this)">
+                            <div id = "kn13">Binary Search</div>
+                        </div>
+                        <div class="baihoc3-item" id = "kn14" data-default-visibility="true" onclick="toggleSelected3(this)">
+                            <div id = "kn14">Interpolation Search</div>
+                        </div>
+
+                        <div class="baihoc4-item" id = "tc12" data-default-visibility="true" onclick="toggleSelected5(this)">
+                            <div id = "tc12">Linear Search</div>
+                        </div>
+                        <div class="baihoc4-item" id = "tc13" data-default-visibility="true" onclick="toggleSelected5(this)">
+                            <div id = "tc13">Binary Search</div>
+                        </div>
+                        <div class="baihoc4-item" id = "tc14" data-default-visibility="true" onclick="toggleSelected5(this)">
+                            <div id = "tc14">Interpolation Search</div>
+                        </div>
+
+                        <div class="baihoc5-item" id = "baihoc5-item-13" data-default-visibility="true" onclick="toggleSelected7(this)">
+                            <div id = "baihoc5-item-13">Linear Search</div>
+                        </div>
+                        <div class="baihoc5-item" id = "baihoc5-item-14" data-default-visibility="true" onclick="toggleSelected7(this)">
+                            <div id = "baihoc5-item-14">Binary Search</div>
+                        </div>
+                        <div class="baihoc5-item" id = "baihoc5-item-15" data-default-visibility="true" onclick="toggleSelected7(this)">
+                            <div id = "baihoc5-item-15">Interpolation Search</div>
+                        </div>
+                    </div>
+
+                    <div class="baihoc-item" onclick="toggleSelected(this)">
+                        <div id = "hash">Hash Table</div>
+                    </div>
+                    <div class="sub-items-container hidden">
+                        <div class="baihoc2-item" data-default-visibility="true" onclick="toggleSelected2(this)">
+                            <div id = "hs1">Hash Table</div>
+                        </div>
+
+                        <div class="baihoc3-item" id = "kn15" data-default-visibility="true" onclick="toggleSelected3(this)">
+                            <div id = "kn15">Hash Table</div>
+                        </div>
+
+                        <div class="baihoc4-item" id = "tc15" data-default-visibility="true" onclick="toggleSelected5(this)">
+                            <div id = "tc15">Hash Table</div>
+                        </div>
+
+                        <div class="baihoc5-item" id = "baihoc5-item-16" data-default-visibility="true" onclick="toggleSelected7(this)">
+                            <div id = "baihoc5-item-16">Hash Table</div>
+                        </div>
+                    </div>
+
+                    <div class="baihoc-item">
+                        <div id = "graph">Đồ thị (Graph)</div>
+                    </div>
+                    <div class="sub-items-container hidden">
+                        <div class="baihoc2-item" data-default-visibility="true" onclick="toggleSelected2(this)">
+                            <div id = "dt">Cấu trúc dữ liệu đồ thị</div>
+                        </div>
+                        <div class="baihoc2-item" data-default-visibility="true" onclick="toggleSelected2(this)">
+                            <div id = "dt1">Dept First Traversal</div>
+                        </div>
+                        <div class="baihoc2-item" data-default-visibility="true" onclick="toggleSelected2(this)">
+                            <div id = "dt2">Breadth First Traversal</div>
+                        </div>
+                        <div class="baihoc3-item" id = "kn16" data-default-visibility="true" onclick="toggleSelected3(this)">
+                            <div id = "kn16">Dept First Traversal</div>
+                        </div>
+                        <div class="baihoc3-item" id = "kn17" data-default-visibility="true" onclick="toggleSelected3(this)">
+                            <div id = "kn17">Breadth First Traversal</div>
+                        </div>
+
+                        <div class="baihoc4-item" id = "tc16" data-default-visibility="true" onclick="toggleSelected5(this)">
+                            <div id = "tc16">Dept First Traversal</div>
+                        </div>
+                        <div class="baihoc4-item" id = "tc17" data-default-visibility="true" onclick="toggleSelected5(this)">
+                            <div id = "tc17">Breadth First Traversal</div>
+                        </div>
+
+                        <div class="baihoc5-item" id = "baihoc5-item-17" data-default-visibility="true" onclick="toggleSelected7(this)">
+                            <div id = "baihoc5-item-17">Dept First Traversal</div>
+                        </div>
+                        <div class="baihoc5-item" id = "baihoc5-item-18" data-default-visibility="true" onclick="toggleSelected7(this)">
+                            <div id = "baihoc5-item-18">Breadth First Traversal</div>
+                        </div>
+                    </div>
+
+                    <div class="baihoc-item" onclick="toggleSelected(this)">
+                        <div id = "tree">Cấu trúc dữ liệu cây</div>
+                    </div>
+                    <div class="sub-items-container hidden">
+                        <div class="baihoc2-item" data-default-visibility="true" onclick="toggleSelected2(this)">
+                            <div id = "tr">Cấu trúc dữ liệu cây</div>
+                        </div>
+                        <div class="baihoc2-item" data-default-visibility="true" onclick="toggleSelected2(this)">
+                            <div id = "tr1">Duyệt cây - Tree Traversal</div>
+                        </div>
+                        <div class="baihoc2-item" data-default-visibility="true" onclick="toggleSelected2(this)">
+                            <div id = "tr2">Binary Search Tree</div>
+                        </div>
+                        <div class="baihoc2-item" data-default-visibility="true" onclick="toggleSelected2(this)">
+                            <div id = "tr3">AVL Tree</div>
+                        </div>
+                        <div class="baihoc2-item" data-default-visibility="true" onclick="toggleSelected2(this)">
+                            <div id = "tr4">Spanning Tree</div>
+                        </div>
+                        <div class="baihoc3-item" id = "kn18" data-default-visibility="true" onclick="toggleSelected3(this)">
+                            <div id = "kn18">Duyệt cây - Tree Traversal</div>
+                        </div>
+                        <div class="baihoc3-item" id = "kn19" data-default-visibility="true" onclick="toggleSelected3(this)">
+                            <div id = "kn19">Binary Search Tree</div>
+                        </div>
+                        <div class="baihoc3-item" id = "kn20" data-default-visibility="true" onclick="toggleSelected3(this)">
+                            <div id = "kn20">AVL Tree</div>
+                        </div>
+                        <div class="baihoc3-item" id = "kn21" data-default-visibility="true" onclick="toggleSelected3(this)">
+                            <div id = "kn21">Spanning Tree</div>
+                        </div>
+
+                        <div class="baihoc4-item" id = "tc18" data-default-visibility="true" onclick="toggleSelected5(this)">
+                            <div id = "tc18">Duyệt cây - Tree Traversal</div>
+                        </div>
+                        <div class="baihoc4-item" id = "tc19" data-default-visibility="true" onclick="toggleSelected5(this)">
+                            <div id = "tc19">Binary Search Tree</div>
+                        </div>
+                        <div class="baihoc4-item" id = "tc20" data-default-visibility="true" onclick="toggleSelected5(this)">
+                            <div id = "tc20">AVL Tree</div>
+                        </div>
+                        <div class="baihoc4-item" id = "tc21" data-default-visibility="true" onclick="toggleSelected5(this)">
+                            <div id = "tc21">Spanning Tree</div>
+                        </div>
+
+                        <div class="baihoc5-item" id = "baihoc5-item-19" data-default-visibility="true" onclick="toggleSelected7(this)">
+                            <div id = "baihoc5-item-19">Duyệt cây - Tree Traversal</div>
+                        </div>
+                        <div class="baihoc5-item" id = "baihoc5-item-20" data-default-visibility="true" onclick="toggleSelected7(this)">
+                            <div id = "baihoc5-item-20">Binary Search Tree</div>
+                        </div>
+                        <div class="baihoc5-item" id = "baihoc5-item-21" data-default-visibility="true" onclick="toggleSelected7(this)">
+                            <div id = "baihoc5-item-21">AVL Tree</div>
+                        </div>
+                        <div class="baihoc5-item" id = "baihoc5-item-22" data-default-visibility="true" onclick="toggleSelected7(this)">
+                            <div id = "baihoc5-item-22">Spanning Tree</div>
+                        </div>
+                    </div>
+
+                    <div class="baihoc-item" onclick="toggleSelected(this)">
+                        <div id = "dequy">Đệ quy</div>
+                    </div>
+                    <div class="sub-items-container hidden">
+                        <div class="baihoc2-item" data-default-visibility="true" onclick="toggleSelected2(this)">
+                            <div id = "dq1">Đệ quy</div>
+                        </div>
+
+                        <div class="baihoc3-item" id = "kn22" data-default-visibility="true" onclick="toggleSelected3(this)">
+                            <div id = "kn22">Đệ quy</div>
+                        </div>
+
+                        <div class="baihoc4-item" id = "tc22" data-default-visibility="true" onclick="toggleSelected5(this)">
+                            <div id = "tc22">Đệ quy</div>
+                        </div>
+
+                        <div class="baihoc5-item" id = "baihoc5-item-23" data-default-visibility="true" onclick="toggleSelected7(this)">
+                            <div id = "baihoc5-item-23">Đệ quy</div>
+                        </div>
+                    </div>
+                    <!-- <div class="baihoc2-item">
+                        <div>Khái niệm cơ bản</div>
+                    </div>
+                    <div class="baihoc2-item">
+                        <div>Bài toán Tháp Hà Nội</div>
+                    </div>
+                    <div class="baihoc2-item">
+                        <div>Dãy Fibonacci</div>
+                    </div> -->
+                    </div>
+                    </div>
+                </div>
+
+                <div id="nd">
+                    <!-- <div id="lesson-content-container"></div> -->
+                </div>
+
+                <div id="noidung-lienquan"><b>Nội dung liên quan</b>
+                    <!-- Sorting -->
+                    <div class="ndlq-item" id="ndBubbleSort">
+                        <div>Bubble Sort</div>
+                    </div>
+                    <div class="ndlq-item" id="ndInsertSort">
+                        <div>Insert Sort</div>
+                    </div>
+                    <div class="ndlq-item" id="ndSelectionSort">
+                        <div>Selection Sort</div>
+                    </div>
+                    <div class="ndlq-item" id="ndMergeSort">
+                        <div>Merge Sort</div>
+                    </div>
+                    <div class="ndlq-item" id="ndQuickSort">
+                        <div>Quick Sort</div>
+                    </div>
+                    <div class="ndlq-item" id="ndShellSort">
+                        <div>Shell Sort</div>
+                    </div>
+
+                    <!-- Ngăn xếp -->
+                    <div class="ndlq-item" id="ndStack">
+                        <div>Stack</div>
+                    </div>
+                    <div class="ndlq-item" id="ndQueue">
+                        <div>Queue</div>
+                    </div>
+
+                    <!-- DSLK -->
+                    <div class="ndlq-item" id="ndLinkList">
+                        <div>Single Linked Lists</div>
+                    </div>
+                    <div class="ndlq-item" id="ndDoubly">
+                        <div>Doubly Linked List</div>
+                    </div>
+                    <div class="ndlq-item" id="ndCircular">
+                        <div>Circular Linked List</div>
+                    </div>
+
+                    <!-- Tìm kiếm -->
+                    <div class="ndlq-item" id="ndLinear">
+                        <div>Linear Search</div>
+                    </div>
+                    <div class="ndlq-item" id="ndBinary">
+                        <div>Binary Search</div>
+                    </div>
+                    <div class="ndlq-item" id="ndInter">
+                        <div>Interpolation Search</div>
+                    </div>
+
+                    <!-- Đồ thị -->
+                    <div class="ndlq-item" id="ndDept">
+                        <div>Dept First Traversal</div>
+                    </div>
+                    <div class="ndlq-item" id="ndBreadth">
+                        <div>Breadth First Traversal</div>
+                    </div>
+
+                    <!-- cây -->
+                    <div class="ndlq-item" id="ndTree">
+                        <div>Duyệt cây - Tree Traversal</div>
+                    </div>
+                    <div class="ndlq-item" id="ndBST">
+                        <div>Binary Search Tree</div>
+                    </div>
+                    <div class="ndlq-item" id="ndAVL">
+                        <div>AVL Tree</div>
+                    </div>
+                    <div class="ndlq-item" id="ndSpanning">
+                        <div>Spanning Tree</div>
+                    </div>
+
+                </div>
+            </div>
+            <!-- <div id="nd"></div> -->
+        </div>
+    </div>
+
+<!-- ------------------------------------------------------------------------------------------------------------------ -->
+
+
+<!-- ------------------------------------------------------------------------------------------------------------------- -->
+
+    <div id="content">
+        <div class="content2-item" id="baitap">
+            <div id= "home-search">
+                <div>
+                    <input type="checkbox" id="phuong-phap-checkbox">
+                    <label for="phuong-phap-checkbox">Phương pháp</label>
+                    <input type="checkbox" id="bai-tap-checkbox">
+                    <label for="bai-tap-checkbox">Bài tập</label>
+                </div>
+            </div>
+
+            <div id="baitap-content">
+                <div id="danh-sach-baitap">
+                <div id="nd-content-container">
+                    <div class="baitap-item">
+                        <div class="baitap-title">Một số dạng bài tập và phương pháp</div>
+                    </div>
+                    <div class="sub-items-container hidden"></div>
+
+                    <div class="baitap-item" onclick="toggleSelected8(this)">
+                        <div class="baitap-title">Sorting</div>
+                    </div>
+                    <div class="sub-items-container hidden">
+                        <div class="baitap2-item" id = "bubble" data-default-visibility="true" onclick="toggleSelected9(this)">
+                            <div id = "bb">Bubble Sort</div>
+                        </div>
+                        <div class="baitap2-item" id = "insert" data-default-visibility="true" onclick="toggleSelected9(this)">
+                            <div id = "inse">Insertion Sort</div>
+                        </div>
+                        <div class="baitap2-item" id = "select" data-default-visibility="true" onclick="toggleSelected9(this)">
+                            <div id = "se">Selection Sort</div>
+                        </div>
+                        <div class="baitap2-item" id = "merge" data-default-visibility="true" onclick="toggleSelected9(this)">
+                            <div id = "me">Merge Sort</div>
+                        </div>
+                        <div class="baitap2-item" id = "quick" data-default-visibility="true" onclick="toggleSelected9(this)">
+                            <div id = "qu">Quick Sort</div>
+                        </div>
+                        <div class="baitap2-item" id = "shell" data-default-visibility="true" onclick="toggleSelected9(this)">
+                            <div id = "sh">Shell Sort</div>
+                        </div>
+
+
+                        <div class="baitap3-item" id = "bt" data-default-visibility="true" onclick="toggleSelected4(this)">
+                            <div id = "bt">Bubble Sort</div>
+                        </div>
+                        <div class="baitap3-item" id = "bt1" data-default-visibility="true" onclick="toggleSelected4(this)">
+                            <div id = "bt1">Insertion Sort</div>
+                        </div>
+                        <div class="baitap3-item" id = "bt2" data-default-visibility="true" onclick="toggleSelected4(this)">
+                            <div id = "bt2">Selection Sort</div>
+                        </div>
+                        <div class="baitap3-item" id = "bt3" data-default-visibility="true" onclick="toggleSelected4(this)">
+                            <div id = "bt3">Merge Sort</div>
+                        </div>
+                        <div class="baitap3-item" id = "bt4" data-default-visibility="true" onclick="toggleSelected4(this)">
+                            <div id = "bt4">Quick Sort</div>
+                        </div>
+                        <div class="baitap3-item" id = "bt5" data-default-visibility="true" onclick="toggleSelected4(this)">
+                            <div id = "bt5">Shell Sort</div>
+                        </div>
+
+                        <div class="baitap4-item" id = "cbt" data-default-visibility="true" onclick="toggleSelected6(this)">
+                            <div id = "cbt">Bài tập Sorting</div>
+                        </div>
+                    </div>
+
+                    
+                    <div class="baitap-item" onclick="toggleSelected8(this)">
+                        <div class="baitap-title">Tìm kiếm</div>
+                    </div>
+                    <div class="sub-items-container hidden">
+                        <div class="baitap2-item" data-default-visibility="true" onclick="toggleSelected9(this)">
+                            <div id = "tk1">Linear Search</div>
+                        </div>
+                        <div class="baitap2-item" data-default-visibility="true" onclick="toggleSelected9(this)">
+                            <div id = "tk2">Binary Search</div>
+                        </div>
+                        <div class="baitap2-item" data-default-visibility="true" onclick="toggleSelected9(this)">
+                            <div id = "tk3">Interpolation Search</div>
+                        </div>
+
+                        <div class="baitap3-item" id = "bt6" data-default-visibility="true" onclick="toggleSelected4(this)">
+                            <div id = "bt6">Linear Search</div>
+                        </div>
+                        <div class="baitap3-item" id = "bt7" data-default-visibility="true" onclick="toggleSelected4(this)">
+                            <div id = "bt7">Binary Search</div>
+                        </div>
+                        <div class="baitap3-item" id = "bt8" data-default-visibility="true" onclick="toggleSelected4(this)">
+                            <div id = "bt8">Interpolation Search</div>
+                        </div>
+
+                        <div class="baitap4-item" id = "cbt1" data-default-visibility="true" onclick="toggleSelected6(this)">
+                            <div id = "cbt1">Bài tập Tìm kiếm</div>
+                        </div>
+                    </div>
+
+                    <div class="baitap-item" onclick="toggleSelected8(this)">
+                        <div class="baitap-title">Danh sách liên kết - Linked List</div>
+                    </div>
+                    <div class="sub-items-container hidden">
+                        <div class="baitap2-item" data-default-visibility="true" onclick="toggleSelected9(this)">
+                            <div id = "link">Linked Lists</div>
+                        </div>
+                        <div class="baitap2-item" data-default-visibility="true" onclick="toggleSelected9(this)">
+                            <div id = "link2">Doubly Linked List</div>
+                        </div>
+                        <div class="baitap2-item" data-default-visibility="true" onclick="toggleSelected9(this)">
+                            <div id = "link3">Circular Linked List</div>
+                        </div>
+
+                        <div class="baitap3-item" id = "bt9" data-default-visibility="true" onclick="toggleSelected4(this)">
+                            <div id = "bt9">Linked Lists</div>
+                        </div>
+                        <div class="baitap3-item" id = "bt10" data-default-visibility="true" onclick="toggleSelected4(this)">
+                            <div id = "bt10">Doubly Linked List</div>
+                        </div>
+                        <div class="baitap3-item" id = "bt11" data-default-visibility="true" onclick="toggleSelected4(this)">
+                            <div id = "bt11">Circular Linked List</div>
+                        </div>
+
+                        <div class="baitap4-item" id = "cbt2" data-default-visibility="true" onclick="toggleSelected6(this)">
+                            <div id = "cbt2">Bài tập Linked</div>
+                        </div>
+                    </div>
+
+                    <div class="baitap-item" onclick="toggleSelected8(this)">
+                        <div class="baitap-title">Ngăn xếp và hàng đợi</div>
+                    </div>
+                    <div class="sub-items-container hidden">
+                        <div class="baitap2-item" data-default-visibility="true" onclick="toggleSelected9(this)">
+                            <div id = "sta">Stack</div>
+                        </div>
+                        <div class="baitap2-item" data-default-visibility="true" onclick="toggleSelected9(this)">
+                            <div id = "que">Queue</div>
+                        </div>
+
+                        <div class="baitap3-item" id = "bt12" data-default-visibility="true" onclick="toggleSelected4(this)">
+                            <div id = "bt12">Stack</div>
+                        </div>
+                        <div class="baitap3-item" id = "bt13" data-default-visibility="true" onclick="toggleSelected4(this)">
+                            <div id = "bt13">Queue</div>
+                        </div>
+
+                        <div class="baitap4-item" id = "cbt3" data-default-visibility="true" onclick="toggleSelected6(this)">
+                            <div id = "cbt3">Bài tập </div>
+                        </div>
+                    </div>
+
+
+                    <div class="baitap-item" onclick="toggleSelected8(this)">
+                        <div class="baitap-title">Cấu trúc dữ liệu cây</div>
+                    </div>
+                    <div class="sub-items-container hidden">
+                        <div class="baitap2-item" data-default-visibility="true" onclick="toggleSelected9(this)">
+                            <div id = "tr1">Duyệt cây - Tree Traversal</div>
+                        </div>
+                        <div class="baitap2-item" data-default-visibility="true" onclick="toggleSelected9(this)">
+                            <div id = "tr2">Binary Search Tree</div>
+                        </div>
+                        <div class="baitap2-item" data-default-visibility="true" onclick="toggleSelected9(this)">
+                            <div id = "tr3">AVL Tree</div>
+                        </div>
+                        <div class="baitap2-item" data-default-visibility="true" onclick="toggleSelected9(this)">
+                            <div id = "tr4">Spanning Tree</div>
+                        </div>
+
+                        <div class="baitap3-item" id = "bt14" data-default-visibility="true" onclick="toggleSelected4(this)">
+                            <div id = "bt14">Duyệt cây - Tree Traversal</div>
+                        </div>
+                        <div class="baitap3-item" id = "bt15" data-default-visibility="true" onclick="toggleSelected4(this)">
+                            <div id = "bt15">Binary Search Tree</div>
+                        </div>
+                        <div class="baitap3-item" id = "bt16" data-default-visibility="true" onclick="toggleSelected4(this)">
+                            <div id = "bt16">AVL Tree</div>
+                        </div>
+                        <div class="baitap3-item" id = "bt17" data-default-visibility="true" onclick="toggleSelected4(this)">
+                            <div id = "bt17">Spanning Tree</div>
+                        </div>
+
+                        <div class="baitap4-item" id = "cbt4" data-default-visibility="true" onclick="toggleSelected6(this)">
+                            <div id = "cbt4">Bài tập Tree</div>
+                        </div>
+                    </div>
+
+                    <div class="baitap-item" onclick="toggleSelected8(this)">
+                        <div class="baitap-title">Hash Table</div>
+                    </div>
+                    <div class="sub-items-container hidden">
+                        <div class="baitap2-item" data-default-visibility="true" onclick="toggleSelected9(this)">
+                            <div id = "dt">Hash Table</div>
+                        </div>
+
+                        <div class="baitap3-item" id = "bt18" data-default-visibility="true" onclick="toggleSelected4(this)">
+                            <div id = "bt18">Hash Table</div>
+                        </div>
+
+                        <div class="baitap4-item" id = "cbt5" data-default-visibility="true" onclick="toggleSelected6(this)">
+                            <div id = "cbt5">Bài tập Hash Table</div>
+                        </div>
+                    </div>
+
+                    <div class="baitap-item" onclick="toggleSelected8(this)">
+                        <div class="baitap-title">Đồ thị (Graph)</div>
+                    </div>
+                    <div class="sub-items-container hidden">
+                        <div class="baitap2-item" data-default-visibility="true" onclick="toggleSelected9(this)">
+                            <div id = "dt1">Breadth First Traversal</div>
+                        </div>
+                        <div class="baitap2-item" data-default-visibility="true" onclick="toggleSelected9(this)">
+                            <div id = "dt2">Dept First Traversal</div>
+                        </div>
+
+                        <div class="baitap3-item" id = "bt19" data-default-visibility="true" onclick="toggleSelected4(this)">
+                            <div id = "bt19">Dept First Traversal</div>
+                        </div>
+                        <div class="baitap3-item" id = "bt20" data-default-visibility="true" onclick="toggleSelected4(this)">
+                            <div id = "bt20">Breadth First Traversal</div>
+                        </div>
+
+                        <div class="baitap4-item" id = "cbt6" data-default-visibility="true" onclick="toggleSelected6(this)">
+                            <div id = "cbt6">Bài tập Graph</div>
+                        </div>
+                    </div>
+
+                    <div class="baitap-item" onclick="toggleSelected8(this)">
+                        <div class="baitap-title">Cấu trúc dữ liệu mảng (Array)</div>
+                    </div>
+                    <div class="sub-items-container hidden">
+                        <div class="baitap2-item" data-default-visibility="true" onclick="toggleSelected9(this)">
+                            <div id = "m1">Cấu trúc dữ liệu mảng (Array)</div>
+                        </div>
+
+                        <div class="baitap3-item" id = "bt21" data-default-visibility="true" onclick="toggleSelected4(this)">
+                            <div id = "bt21">Cấu trúc dữ liệu mảng (Array)</div>
+                        </div>
+
+                        <div class="baitap4-item" id = "cbt7" data-default-visibility="true" onclick="toggleSelected6(this)">
+                            <div id = "cbt7">Bài tập Array</div>
+                        </div>
+                    </div>
+
+                    <div class="baitap-item" onclick="toggleSelected8(this)">
+                        <div class="baitap-title">Đệ quy</div>
+                    </div>
+                    <div class="sub-items-container hidden">
+                        <div class="baitap2-item" data-default-visibility="true" onclick="toggleSelected9(this)">
+                            <div id = "dq">Đệ quy</div>
+                        </div>
+
+                        <div class="baitap3-item" id = "bt22" data-default-visibility="true" onclick="toggleSelected4(this)">
+                            <div id = "bt22">Đệ quy</div>
+                        </div>
+
+                        <div class="baitap4-item" id = "cbt8" data-default-visibility="true" onclick="toggleSelected6(this)">
+                            <div id = "cbt8">Bài tập Đệ quy</div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+
+                <div id="ndbaitap"></div>
+
+            </div>
+        </div>
+    </div>
+
+
+<!-- ------------------------------------------------------------------------------------------------ -->
+<div class="content-item" id="illustration">
+    <div class="container sm">
+        <div class="row mt-5">
+            <div class="col-3">
+                <a href="https://visualgo.net/en/sorting?slide=1">
+                    <img src="img/Sorting.png" alt="">
+                    <p class="content">Sorting</p>
+                </a>
+            </div>
+
+            <div class="col-3">
+                <a href="https://visualgo.net/en/bitmask?slide=1">
+                    <img src="img/Bitmask.png" alt="">
+                    <p class="content">Bitmask</p>
+                </a>
+
+            </div>
+            <div class="col-3">
+                <a href="https://visualgo.net/en/list?slide=1">
+                    <img src="img/LinkedList.png" alt="">
+                    <p class="content">Linked List</p>
+                </a>
+            </div>
+            <div class="col-3">
+                <a href="https://visualgo.net/en/heap?slide=1">
+                    <img src="img/BinaryHeap.png" alt="">
+                    <p class="content">Binary heap</p>
+                </a>
+            </div>
+        </div>
+        <div class="row mt-5">
+            <div class="col-3">
+                <a href="https://visualgo.net/en/hashtable?slide=1">
+                    <img src="img/HashTable.png" alt="">
+                    <p class="content">Hash Table</p>
+                </a>
+            </div>
+            <div class="col-3">
+                <a href="https://visualgo.net/en/bst?slide=1">
+                    <img src="img/BinarySearchTree.png" alt="">
+                    <p class="content">Binary Search Tree</p>
+                </a>
+            </div>
+            <div class="col-3">
+                <a href="https://visualgo.net/en/graphds?slide=1">
+                    <img src="img/GraphStructures.png" alt="">
+                    <p class="content">Graph Structures</p>
+                </a>
+            </div>
+            <div class="col-3">
+                <a href="https://visualgo.net/en/ufds?slide=1">
+                    <img src="img/Union_findDS.png" alt="">
+                    <p class="content">Union_Find DS</p>
+                </a>
+            </div>
+        </div>
+        <div class="row mt-5">
+            <div class="col-3">
+                <a href="https://visualgo.net/en/fenwicktree?slide=1">
+                    <img src="img/FenwickTree.png" alt="">
+                    <p class="content">Fenwick Tree</p>
+                </a>
+            </div>
+            <div class="col-3">
+                <a href="https://visualgo.net/en/segmenttree?slide=1">
+                    <img src="img/SegmentTree.png" alt="">
+                    <p class="content">Segment Tree</p>
+                </a>
+            </div>
+            <div class="col-3">
+                <a href="https://visualgo.net/en/recursion?slide=1">
+                    <img src="img/RecursionTree-DAG.png" alt="">
+                    <p class="content">Recursion Tree/DAG</p>
+                </a>
+            </div>
+            <div class="col-3">
+                <a href="https://visualgo.net/en/dfsbfs?slide=1">
+                    <img src="img/GraphTraversal.png" alt="">
+                    <p class="content">Graph Travelsal</p>
+                </a>
+            </div>
+        </div>
+        <div class="row mt-5">
+            <div class="col-3">
+                <a href="https://visualgo.net/en/mst?slide=1">
+                    <img src="img/MinSpanningTree.png" alt="">
+                    <p class="content">Min Spanning Tree</p>
+                </a>
+            </div>
+            <div class="col-3">
+                <a href="https://visualgo.net/en/sssp?slide=1">
+                    <img src="img/SSShortestPaths.png" alt="">
+                    <p class="content">SS Shortest Paths</p>
+                </a>
+            </div>
+            <div class="col-3">
+                <a href="https://visualgo.net/en/cyclefinding?slide=1">
+                    <img src="img/CycleFinding.png" alt="">
+                    <p class="content">Cycle Finding</p>
+                </a>
+            </div>
+            <div class="col-3">
+                <a href="https://visualgo.net/en/suffixtree?slide=1">
+                    <img src="img/SuffixTree.png" alt="">
+                    <p class="content">Suffix Tree</p>
+                </a>
+            </div>
+        </div>
+        <div class="row mt-5">
+            <div class="col-3">
+                <a href="https://visualgo.net/en/suffixarray?slide=1">
+                    <img src="img/SuffixArray.png" alt="">
+                    <p class="content">Suffix Array</p>
+                </a>
+            </div>
+            <div class="col-3">
+                <a href="https://visualgo.net/en/polygon?slide=1">
+                    <img src="img/Geometry(Polygon).png" alt="">
+                    <p class="content">Geometry (Polygon)</p>
+                </a>
+            </div>
+            <div class="col-3">
+                <a href="https://visualgo.net/en/convexhull?slide=1">
+                    <img src="img/ConvexHull.png" alt="">
+                    <p class="content">Convex Hull</p>
+                </a>
+            </div>
+            <div class="col-3">
+                <a href="https://visualgo.net/en/maxflow?slide=1">
+                    <img src="img/NetworkFlow.png" alt="">
+                    <p class="content">Network Flow</p>
+                </a>
+            </div>
+        </div>
+        <div class="row mt-5">
+            <div class="col-3">
+                <a href="https://visualgo.net/en/matching?slide=1">
+                    <img src="img/GraphMatching.png" alt="">
+                    <p class="content">Graph Matching</p>
+                </a>
+            </div>
+            <div class="col-3">
+                <a href="https://visualgo.net/en/mvc?slide=1">
+                    <img src="img/MinVertexCover.png" alt="">
+                    <p class="content">Min Vertex Cover</p>
+                </a>
+            </div>
+            <div class="col-3">
+                <a href="https://visualgo.net/en/tsp?slide=1">
+                    <img src="img/TravelingSalesman.png" alt="">
+                    <p class="content">Traveling Salesman</p>
+                </a>
+            </div>
+            <div class="col-3">
+                <a href="https://visualgo.net/en/steinertree?slide=1">
+                    <img src="img/SteinerTree.png" alt="">
+                    <p class="content">Steiner Tree</p>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+         
+<script src="inside.js"></script>
+    
+</body>
+</html>
